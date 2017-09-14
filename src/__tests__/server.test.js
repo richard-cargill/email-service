@@ -4,7 +4,7 @@ const listen = require('test-listen');
 const request = require('request-promise');
 const server = require('../server');
 
-it('should run server without error', async () => {
+it('should throw 405 error', async () => {
   const service = micro(server);
   let error;
   try {
@@ -14,6 +14,6 @@ it('should run server without error', async () => {
     error = err;
   }
 
-  expect(error).toBeUndefined();
+  expect(error.statusCode).toBe(405);
   service.close();
 });

@@ -1,14 +1,14 @@
 {
-  "name": "micro-base",
-  "version": "1.0.0",
+  "name": "email-service",
+  "version": "1.0.1",
   "description": "",
   "main": "./src/server.js",
   "scripts": {
     "start": "micro -p ${PORT:-3000}",
     "dev": "micro-dev",
     "prebuild": "dockerpkg",
-    "build": "docker build -t dockerpkg/micro-base:latest .",
-    "run": "docker run -p 3000:3000 -it --name micro-base --rm dockerpkg/micro-base:latest",
+    "build": "docker build -t dockerpkg/email-service:latest .",
+    "run": "docker run -p 3000:3000 -it --name email-service --rm dockerpkg/email-service:latest",
     "test": "xo --space && jest --coverage --forceExit"
   },
   "bin": "./src/index.js",
@@ -16,6 +16,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^4.0.0",
+    "mailgun-js": "^0.13.1",
     "micro": "^9.0.0",
     "micro-compose": "^0.0.3",
     "micro-compress": "^1.0.0",
