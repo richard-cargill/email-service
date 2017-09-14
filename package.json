@@ -8,7 +8,7 @@
     "dev": "micro-dev",
     "prebuild": "dockerpkg",
     "build": "docker build -t dockerpkg/email-service:latest .",
-    "run": "docker run -p 3000:3000 -it --name email-service --rm dockerpkg/email-service:latest",
+    "run": "docker run -p 3000:3000 -it --env-file=.env --name email-service --rm dockerpkg/email-service:latest",
     "test": "xo --space && jest --coverage --forceExit"
   },
   "bin": "./src/index.js",
