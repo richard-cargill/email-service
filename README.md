@@ -11,4 +11,4 @@ email microservice - zeit micro, node, mailgun
 }`
 
 
-[mailgun so slow](https://help.mailgun.com/hc/en-us/articles/203306890-I-just-submitted-a-lot-of-messages-Why-is-delivery-happening-so-slowly-)
+[mailgun why you so slow](https://help.mailgun.com/hc/en-us/articles/203306890-I-just-submitted-a-lot-of-messages-Why-is-delivery-happening-so-slowly-)
